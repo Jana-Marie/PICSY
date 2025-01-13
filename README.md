@@ -1,5 +1,7 @@
 # Picsy
 
+![](/img/out-scaled-rotated.png)
+
 ### Setup
 
 flash the ESP32-CAM, see (/firmware)[/firmware], afterwards copy `ubuf2png.py` onto the ESP32-CAM with `ampy -p /dev/ttyUSB0 -b 115200 put ubuf2png.py`
