@@ -1,5 +1,7 @@
 # Picsy
 
+An ESP32 based Pixel-Art-Camera, shooting color-indexed pixel art alike PNGs directly onto an SD card.
+
 ![](/img/out-scaled-rotated.png)
 
 ### Setup
