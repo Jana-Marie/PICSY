@@ -1,2 +1,8 @@
 - fix buffer swap issue
 - moar speed
+- pin irq
+- add webserver to view and transmit images
+- ~~add camera settings~~ DONE
+- add more, selectable color palettes
+- dithering
+- nearest color matching

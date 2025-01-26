@@ -55,6 +55,46 @@ class Cam:
     print("Done!")
     self.fileIndex += 1
 
+  def setCameraImageQuality(self, quality):
+    if 10 <= quality <= 63:
+      print("Set quality to ", quality)
+      self.camera.quality(quality)
+
+  def setCameraImageContrast(self, contrast):
+    if -2 <= contrast <= 2:
+      print("Set contrast to ", contrast)
+      self.camera.contrast(contrast)
+
+  def setCameraImageBrightness(self, brightness):
+    if -2 <= brightness <= 2:
+      print("Set brightness to ", brightness)
+      self.camera.brightness(brightness)
+  
+  def setCameraImageSaturation(self, saturation):
+    if -2 <= saturation <= 2:
+      print("Set saturation to ", saturation)
+      self.camera.saturation(saturation)
+
+  def setCameraImageWhitebalance(self, whitebalance):
+    if 0 <= whitebalance <= 4:
+      print("Set whitebalance to ", whitebalance)
+      self.camera.whitebalance(whitebalance)
+
+  def setCameraImageEffect(self, effect):
+    if 0 <= effect <= 4:
+      print("Set effect to ", effect)
+      self.camera.speffect(effect)
+
+  def flipCameraImage(self, flip):
+    if 0 <= flip <= 1:
+      print("Flip image to ", flip)
+      self.camera.flip(flip)
+
+  def mirrorCameraImage(self, mirror):
+    if 0 <= mirror <= 1:
+      print("Mirror image to ", mirror)
+      self.camera.mirror(mirror)
+
   def deinit(self):
     camera.deinit()
     vfs.unmount('/sd')
