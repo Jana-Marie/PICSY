@@ -53,6 +53,8 @@
     - [x] ~~Swap UART pins~~
     - [ ] Implement changes on PCB
     - [ ] PCB font sizes are too small
+    - [ ] STM32 nRST pin needs pullup
+    - [ ] Display 2 has the wrong connector
   - [ ] Clean up schematic
   - [ ] DFM
 
