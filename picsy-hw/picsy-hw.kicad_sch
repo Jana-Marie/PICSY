@@ -12595,7 +12595,7 @@
 		)
 		(uuid "ff48463d-2c8b-4a8a-8a51-35232eab1936")
 	)
-	(text "VERSION 2:\n - fix psram pinout\n    - swap sub-nibbles for pin 2 and 3 [DONE]\n - Cam-Clock pin to 15pf [DONE]\n - Font size too small\n - Status LEDs\n	- Back and Front\n - Display Backlight\n - STM32 I2C Bootloader\n - SD CARD Single lane interface?\n - ESP32 to ESP32-Mini or other modern Module\n - FIX UART [DONE]"
+	(text "VERSION 2:\n - fix psram pinout [DONE]\n    - swap sub-nibbles for pin 2 and 3 [DONE]\n - Cam-Clock pin to 15pf [DONE]\n - Font size too small\n - Status LEDs\n	- Back and Front\n - Display Backlight\n - STM32 I2C Bootloader\n - SD CARD Single lane interface?\n - ESP32 to ESP32-Mini or other modern Module\n - FIX UART [DONE]"
 		(exclude_from_sim no)
 		(at 102.108 80.518 0)
 		(effects
