@@ -12595,7 +12595,7 @@
 		)
 		(uuid "ff48463d-2c8b-4a8a-8a51-35232eab1936")
 	)
-	(text "VERSION 2:\n - fix psram pinout [DONE]\n    - swap sub-nibbles for pin 2 and 3 [DONE]\n - Cam-Clock pin to 15pf [DONE]\n - Font size too small\n - Status LEDs\n	- Back and Front\n - Display Backlight\n - STM32 I2C Bootloader\n - SD CARD Single lane interface?\n - ESP32 to ESP32-Mini or other modern Module\n - FIX UART [DONE]"
+	(text "VERSION 2:\n - fix psram pinout [DONE]\n    - swap sub-nibbles for pin 2 and 3 [DONE]\n - Cam-Clock pin to 15pf [DONE]\n - Font size too small\n - Status LEDs\n	- Back and Front\n - Display Backlight\n - STM32 I2C Bootloader\n - SD CARD Single lane interface?\n - ESP32 to ESP32-Mini or other modern Module\n - FIX UART [DONE]\n - STM32 nRST PullUp\n - Live view display connector too narrow"
 		(exclude_from_sim no)
 		(at 102.108 80.518 0)
 		(effects
@@ -12819,7 +12819,7 @@
 			)
 		)
 	)
-	(global_label "Brightness"
+	(global_label "Exposure"
 		(shape input)
 		(at 76.2 295.91 180)
 		(fields_autoplaced yes)
@@ -12831,7 +12831,7 @@
 		)
 		(uuid "1677f5d6-0683-49fd-8287-424e72bd1266")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.2363 295.91 0)
+			(at 64.6878 295.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13786,7 +13786,7 @@
 			)
 		)
 	)
-	(global_label "Resolution"
+	(global_label "Dither"
 		(shape input)
 		(at 22.86 257.81 0)
 		(fields_autoplaced yes)
@@ -13798,7 +13798,7 @@
 		)
 		(uuid "76075061-7fd3-486b-b2e3-7e5b1a4cd8ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.8236 257.81 0)
+			(at 31.4695 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14028,7 +14028,7 @@
 			)
 		)
 	)
-	(global_label "Resolution"
+	(global_label "Dither"
 		(shape input)
 		(at 76.2 224.79 180)
 		(fields_autoplaced yes)
@@ -14040,7 +14040,7 @@
 		)
 		(uuid "8f542028-7f8e-46f0-b973-dfce232ebc66")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 63.2364 224.79 0)
+			(at 67.5905 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14138,7 +14138,7 @@
 			)
 		)
 	)
-	(global_label "Brightness"
+	(global_label "Exposure"
 		(shape input)
 		(at 22.86 262.89 0)
 		(fields_autoplaced yes)
@@ -14150,7 +14150,7 @@
 		)
 		(uuid "951a5c17-1591-4f1b-94d9-eb6bedf04e55")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.8237 262.89 0)
+			(at 34.3722 262.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
