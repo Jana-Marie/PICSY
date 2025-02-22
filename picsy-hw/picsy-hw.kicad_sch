@@ -12595,7 +12595,7 @@
 		)
 		(uuid "ff48463d-2c8b-4a8a-8a51-35232eab1936")
 	)
-	(text "TODO:\n - Double Check\n - Status LEDs"
+	(text "VERSION 2:\n - fix psram pinout\n    - swap sub-nibbles for pin 2 and 3 [DONE]\n - Cam-Clock pin to 15pf [DONE]\n - Font size too small\n - Status LEDs\n	- Back and Front\n - Display Backlight\n - STM32 I2C Bootloader\n - SD CARD Single lane interface?\n - ESP32 to ESP32-Mini or other modern Module\n - FIX UART [DONE]"
 		(exclude_from_sim no)
 		(at 102.108 80.518 0)
 		(effects
@@ -13766,7 +13766,7 @@
 	)
 	(global_label "ESP_RX"
 		(shape input)
-		(at 82.55 -35.56 0)
+		(at 82.55 -38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13776,11 +13776,12 @@
 		)
 		(uuid "72bf7da4-54d1-42d1-8011-3c10fce9b96c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -24.13 -62.23 0)
+			(at 92.6108 -38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -14753,7 +14754,7 @@
 	)
 	(global_label "PSRAM_SD3"
 		(shape input)
-		(at 199.39 91.44 180)
+		(at 199.39 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14763,7 +14764,7 @@
 		)
 		(uuid "ce1f3920-6e08-484e-b5d7-d990fd56491d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185.4587 91.44 0)
+			(at 185.4587 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14929,7 +14930,7 @@
 	)
 	(global_label "PSRAM_SD2"
 		(shape input)
-		(at 199.39 93.98 180)
+		(at 199.39 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14939,7 +14940,7 @@
 		)
 		(uuid "dbc908d8-ef3e-4561-b7c4-df6fdc3bd32c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 185.4587 93.98 0)
+			(at 185.4587 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14951,7 +14952,7 @@
 	)
 	(global_label "ESP_TX"
 		(shape input)
-		(at 82.55 -38.1 0)
+		(at 82.55 -35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14961,7 +14962,7 @@
 		)
 		(uuid "dbf37dfe-b552-4e3c-a8bb-ed4c7f1e885d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.3084 -38.1 0)
+			(at 92.3084 -35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20728,7 +20729,7 @@
 				)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "DNP"
 			(at 218.44 129.54 90)
 			(effects
 				(font
@@ -26005,7 +26006,7 @@
 				)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "DNP"
 			(at 218.44 144.78 90)
 			(effects
 				(font
@@ -29386,7 +29387,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "15p"
 			(at 152.4 104.1462 0)
 			(effects
 				(font

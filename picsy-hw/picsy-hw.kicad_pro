@@ -497,10 +497,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "picsy-hw.step",
       "svg": "",
       "vrml": ""
     },
