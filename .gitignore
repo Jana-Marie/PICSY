@@ -1,0 +1,10 @@
+picsy-hw-backups/
+fp-info-cache
+bom/
+gerber/
+
+*.old
+
+*.step
+*.stp
+*.stl
