@@ -49,6 +49,8 @@ class Cam:
     else:
       print("Other I2C interrupt")
       # todo STM32 status check via I2C
+      print("Enabling IRQs again")
+      self.defineShutterButtonIrq()
       pass
 
   def takePhotoToSD(self):
