@@ -1,4 +1,6 @@
 #include "main.h"
+#include "i2c_client.h"
+#include "i2c_registermap.h"
 
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
@@ -10,16 +12,22 @@ DMA_HandleTypeDef hdma_i2c1_tx;
 TIM_HandleTypeDef htim1;
 
 enum dither_states {DITHER_0 = 0, DITHER_1, DITHER_2};
+uint16_t dither_bins[3] = {4095, 2112, 1450};
+
 enum palette_states {PALETTE_0 = 0, PALETTE_1, PALETTE_2, PALETTE_3, PALETTE_4, PALETTE_5};
+uint16_t palette_bins[6] = {4095, 2112, 1450, 465, 233, 794};
+
 enum exposure_states {EXPOSURE_0 = 0, EXPOSURE_1, EXPOSURE_2, EXPOSURE_3, EXPOSURE_4};
+uint16_t exposure_bins[4] = {4095, 2112, 1450, 605}; // wip, needs to be 5, ordered wrong switch
 
 struct analog_t {
   uint16_t adc[4];
   uint16_t vbat;
+  uint8_t binsize;
   uint8_t dither;
   uint8_t palette;
   uint8_t exposure;
-} a;
+} analog = {.binsize = 50};
 
 struct trigger_t {
   uint8_t flag;
@@ -33,6 +41,9 @@ static void MX_DMA_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM1_Init(void);
+void Error_Handler(void);
+
+i2c_client_init_t i2c_init = {.hi2c = &hi2c1, .error_handler = &Error_Handler};
 
 int main(void)
 {
@@ -46,7 +57,20 @@ int main(void)
   MX_TIM1_Init();
 
   HAL_TIM_Base_Start_IT(&htim1);
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t *) &a.adc[0], 4);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *) &analog.adc[0], 4);
+
+  I2C_Client_Init(&i2c_init);
+
+  I2C_Set_Register(CHIPID01, 13);
+  I2C_Set_Register(CHIPID02, 12);
+
+  I2C_Set_Register(FWVERSMA, 0);
+  I2C_Set_Register(FWVERSMI, 1);
+  I2C_Set_Register(FWVERSPA, 0);
+
+  I2C_Set_Register(DISPLRST, 0);
+  I2C_Set_Register(DISPLCSA, 0);
+  I2C_Set_Register(DISPLCSB, 0);
 
   while (1)
   {
@@ -56,6 +80,60 @@ int main(void)
       HAL_Delay(1);
       HAL_GPIO_WritePin(GPIOB, INT_OUT_Pin, GPIO_PIN_SET);
     }
+
+    for(uint8_t i = 0; i < sizeof(dither_bins)/2; i++){
+      if(analog.adc[1] >= dither_bins[i]-analog.binsize && analog.adc[1] <= dither_bins[i]+analog.binsize){
+        // WIP INT flags and sticky int pin
+        //if(i != analog.dither){
+        //  // set flag and IO
+        //}
+        analog.dither = i;
+      }
+    }
+    for(uint8_t i = 0; i < sizeof(palette_bins)/2; i++){
+      if(analog.adc[2] >= palette_bins[i]-analog.binsize && analog.adc[2] <= palette_bins[i]+analog.binsize){
+        // WIP INT flags and sticky int pin
+        //if(i != analog.palette){
+        //  // set flag and IO
+        //}
+        analog.palette = i;
+      }
+    }
+    for(uint8_t i = 0; i < sizeof(exposure_bins)/2; i++){
+      if(analog.adc[3] >= exposure_bins[i]-analog.binsize && analog.adc[3] <= exposure_bins[i]+analog.binsize){
+        // WIP INT flags and sticky int pin
+        //if(i != analog.exposure){
+        //  // set flag and IO
+        //}
+        analog.exposure = i;
+      }
+    }
+
+    analog.vbat = (analog.adc[0]*9900/8192);
+
+    // Return dial positions
+    I2C_Set_Register(RSDITHER, analog.dither);
+    I2C_Set_Register(RSPALETT, analog.palette);
+    I2C_Set_Register(RSEXPOSU, analog.exposure);
+
+    // Return battery level
+    I2C_Set_Register(VBATTERY, analog.vbat);
+
+    // Read & return trigger IO, mostly used for debug purporses right now
+    I2C_Set_Register(TRIGGERA, HAL_GPIO_ReadPin(GPIOA, TRIGGER_A_Pin));
+    I2C_Set_Register(TRIGGERB, HAL_GPIO_ReadPin(GPIOA, TRIGGER_B_Pin));
+
+    // Return trigger counts
+    I2C_Set_Register(TRIACNTA, (uint8_t)(trigger.l_count >> 8) & 0xFF);
+    I2C_Set_Register(TRIACNTB, (uint8_t)(trigger.l_count & 0xFF));
+
+    I2C_Set_Register(TRIBCNTA, (uint8_t)(trigger.r_count >> 8) & 0xFF);
+    I2C_Set_Register(TRIBCNTB, (uint8_t)(trigger.r_count & 0xFF));
+
+    // Display related IO
+    HAL_GPIO_WritePin(GPIOB, DISPLAY_RST_Pin, (!I2C_Get_Register(DISPLRST)) & 0x01);
+    HAL_GPIO_WritePin(GPIOA, DISPLAY_1_CS_Pin, (!I2C_Get_Register(DISPLCSA)) & 0x01);
+    HAL_GPIO_WritePin(GPIOA, DISPLAY_2_CS_Pin, (!I2C_Get_Register(DISPLCSB)) & 0x01);
   }
 }
 
@@ -71,6 +149,7 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
     __NOP();
   }
 }
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
