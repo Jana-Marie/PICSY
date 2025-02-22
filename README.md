@@ -1,4 +1,4 @@
-# Picsy
+# PICSY
 
 **UNDER DEVELOPMENT :3**
 
