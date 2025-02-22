@@ -41,9 +41,7 @@ class Cam:
 
   def takePhotoToSD(self):
     buf = camera.capture()
-
     print("Processing photo...")
-
     pngimg = ubuf2png.PngImage(400,296,3,8)
 
     with open('/sd/' + self.fileDir + '/' + self.filePrefix + f"{self.fileIndex:04d}" + '.png', 'wb') as f:
