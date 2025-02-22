@@ -1,51 +1,51 @@
 - ESP32
- - [ ] Image processing
-  - [ ] Fix buffer swap issue, check if it still persists
-  - [ ] Increase processing speed
- - [ ] UI
-  - [ ] Trigger pin irq
-  - [ ] Add webserver to view and transmit images
-  - [ ] Add palette display driver
-  - [ ] Implement palette display UI
-  - [ ] Add live-view display driver
-  - [ ] Implement live view
- - [ ] Coprocessor
-  - [ ] Read trigger pin
-  - [ ] Add co-processor communication (I2C)
-  - [ ] Co-processor flashing via I2C
- - [ ] Settings
-  - [x] ~~add camera settings code~~
-  - [ ] Read settings from SD card (YAML/JSON)
-  - [ ] Add more, selectable color palettes
-  - [ ] Add dithering (InDi)
-  - [ ] Nearest color matching, if possible
- - [ ] Misc
-  - [ ] Check SD interface speed, is single lane fast enough to free pins?
+  - [ ] Image processing
+    - [ ] Fix buffer swap issue, check if it still persists
+    - [ ] Increase processing speed
+  - [ ] UI
+    - [ ] Trigger pin irq
+    - [ ] Add webserver to view and transmit images
+    - [ ] Add palette display driver
+    - [ ] Implement palette display UI
+    - [ ] Add live-view display driver
+    - [ ] Implement live view
+  - [ ] Coprocessor
+    - [ ] Read trigger pin
+    - [ ] Add co-processor communication (I2C)
+    - [ ] Co-processor flashing via I2C
+  - [ ] Settings
+    - [x] ~~add camera settings code~~
+    - [ ] Read settings from SD card (YAML/JSON)
+    - [ ] Add more, selectable color palettes
+    - [ ] Add dithering (InDi)
+    - [ ] Nearest color matching, if possible
+  - [ ] Misc
+    - [ ] Check SD interface speed, is single lane fast enough to free pins?
 - STM32
- - [ ] Add initial fw
- - [ ] I2C
-  - [ ] Implement functionality
-  - [ ] Define registermap
- - [ ] ADC
-  - [ ] Add all ADC channels
-  - [ ] Bin the rotary encoders
-  - [ ] Implement VBAT calculation
- - [ ] Trigger pins
-  - [ ] Add l-r trigger pins
-  - [ ] have a direct trigger pin interrup pass-through
- - [ ] Displays
-  - [ ] Add CS pins, inactive high
-  - [ ] Add RST pin
- - [ ] I2C bootloader
+  - [ ] Add initial fw
+  - [ ] I2C
+    - [ ] Implement functionality
+    - [ ] Define registermap
+  - [ ] ADC
+    - [ ] Add all ADC channels
+    - [ ] Bin the rotary encoders
+    - [ ] Implement VBAT calculation
+  - [ ] Trigger pins
+    - [ ] Add l-r trigger pins
+    - [ ] have a direct trigger pin interrup pass-through
+  - [ ] Displays
+    - [ ] Add CS pins, inactive high
+    - [ ] Add RST pin
+  - [ ] I2C bootloader
 - Hardwre
- - [ ] rev1.1
-  - [x] ~~Fix PSRAM layout in schematic~~
-  - [x] ~~Cam clock pin 100nF → 15nF~~
-  - [ ] Add status LEDs
-  - [ ] Add display backlight control
-  - [ ] Update ESP32 to a more modern module with internal PSRAM
-  - [x] ~~Swap UART pins~~
-  - [ ] Implement changes on PCB
-  - [ ] PCB font sizes are too small
- - [ ] Clean up schematic
- - [ ] DFM
+  - [ ] rev1.1
+    - [x] ~~Fix PSRAM layout in schematic~~
+    - [x] ~~Cam clock pin 100nF → 15nF~~
+    - [ ] Add status LEDs
+    - [ ] Add display backlight control
+    - [ ] Update ESP32 to a more modern module with internal PSRAM
+    - [x] ~~Swap UART pins~~
+    - [ ] Implement changes on PCB
+    - [ ] PCB font sizes are too small
+  - [ ] Clean up schematic
+  - [ ] DFM
