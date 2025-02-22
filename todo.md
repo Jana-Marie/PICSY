@@ -1,4 +1,4 @@
-- ESP32
+- **ESP32**
   - [ ] Image processing
     - [ ] Fix buffer swap issue, check if it still persists
     - [ ] Increase processing speed
@@ -21,7 +21,9 @@
     - [ ] Nearest color matching, if possible
   - [ ] Misc
     - [ ] Check SD interface speed, is single lane fast enough to free pins?
-- STM32
+
+
+- **STM32**
   - [ ] Add initial fw
   - [ ] I2C
     - [ ] Implement functionality
@@ -37,7 +39,9 @@
     - [ ] Add CS pins, inactive high
     - [ ] Add RST pin
   - [ ] I2C bootloader
-- Hardwre
+
+
+- **Hardwre**
   - [ ] rev1.1
     - [x] ~~Fix PSRAM layout in schematic~~
     - [x] ~~Cam clock pin 100nF → 15nF~~
@@ -49,3 +53,6 @@
     - [ ] PCB font sizes are too small
   - [ ] Clean up schematic
   - [ ] DFM
+
+- **Documentation**
+  - [ ] Add documentation as we go along
