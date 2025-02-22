@@ -34,12 +34,25 @@ class Cam:
       return int(filelist[-1][len(self.filePrefix):-4]) + 1
 
   def defineShutterButtonIrq(self):
-    self.shutter.irq(handler=self.cam.takePhotoToSD(str(random.randint(1000,9999))), trigger=machine.Pin.IRQ_RISING)
+    self.shutter.irq(handler=self.shutterIrqHandler, trigger=machine.Pin.IRQ_FALLING)
 
   def pollShutterButton(self):
     return self.shutter.value()
 
+  def shutterIrqHandler(self, shutter):
+    # wait 2ms to see whether the IRQ is a shutter IRQ (<=1ms) or a different I2C IRQ (>=1ms)
+    self.shutter.irq(handler=None)
+    time.sleep_ms(2)
+    if shutter.value() == 1:
+      print("Shutter was pressed!")
+      self.takePhotoToSD()
+    else:
+      print("Other I2C interrupt")
+      # todo STM32 status check via I2C
+      pass
+
   def takePhotoToSD(self):
+    print("Taking photo")
     buf = camera.capture()
     print("Processing photo...")
     pngimg = ubuf2png.PngImage(400,296,3,8)
@@ -52,6 +65,8 @@ class Cam:
     os.sync()
     print("Done!")
     self.fileIndex += 1
+    print("Enabling IRQs again")
+    self.defineShutterButtonIrq()
 
   def setCameraImageQuality(self, quality):
     if 10 <= quality <= 63:
@@ -101,10 +116,7 @@ if __name__ == '__main__':
   
   cam = Cam("PICSY-", 33)
   time.sleep_ms(100)
+  cam.defineShutterButtonIrq()
 
   while True:
-    if cam.pollShutterButton() == 1:
-      print("Button pressed. Smile!")
-      cam.takePhotoToSD()
-    else:
-      time.sleep_ms(20)
+    time.sleep_ms(10)
