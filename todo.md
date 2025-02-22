@@ -3,14 +3,15 @@
     - [ ] Fix buffer swap issue, check if it still persists
     - [ ] Increase processing speed
   - [ ] UI
-    - [x] Trigger pin irq
+    - [x] ~~Trigger pin irq~~
     - [ ] Add webserver to view and transmit images
     - [ ] Add palette display driver
     - [ ] Implement palette display UI
     - [ ] Add live-view display driver
     - [ ] Implement live view
+    - [ ] Bodge an LED until next PCB rev
   - [ ] Coprocessor
-    - [x] Read trigger pin
+    - [x] ~~Read trigger pin~~
     - [ ] Add co-processor communication (I2C)
     - [ ] Co-processor flashing via I2C
   - [ ] Settings
@@ -24,20 +25,20 @@
 
 
 - **STM32**
-  - [x] Add initial fw
-  - [ ] I2C
-    - [ ] Implement functionality
-    - [ ] Define registermap
-  - [x] ADC
-    - [x] Add all ADC channels
-    - [ ] Bin the rotary encoders
-    - [ ] Implement VBAT calculation
-  - [x] Trigger pins
-    - [x] Add l-r trigger pins
-    - [x] have a direct trigger pin interrup pass-through
-  - [ ] Displays
-    - [ ] Add CS pins, inactive high
-    - [ ] Add RST pin
+  - [x] ~~Add initial fw~~
+  - [x] ~~I2C~~
+    - [x] ~~Implement functionality~~
+    - [x] ~~Define registermap~~
+  - [x] ~~ADC~~
+    - [x] ~~Add all ADC channels~~
+    - [x] ~~Bin the rotary encoders~~
+    - [x] ~~Implement VBAT calculation~~
+  - [x] ~~Trigger pins~~
+    - [x] ~~Add l-r trigger pins~~
+    - [x] ~~have a direct trigger pin interrup pass-through~~
+  - [x] ~~Displays~~
+    - [x] ~~Add CS pins, inactive high~~
+    - [x] ~~Add RST pin~~
   - [ ] I2C bootloader
 
 
