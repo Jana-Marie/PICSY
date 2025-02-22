@@ -22,6 +22,7 @@
  - [ ] Misc
   - [ ] Check SD interface speed, is single lane fast enough to free pins?
 - STM32
+ - [ ] Add initial fw
  - [ ] I2C
   - [ ] Implement functionality
   - [ ] Define registermap
