@@ -7,7 +7,7 @@ if($preview){
   $fn=300;
   *mirror([0,0,0])translate([130/2,0,70])trigger_body();
   *mirror([0,0,0])translate([130/2,0,70])trigger_button();
-  bottom_cover(4);
+  front_plate();
 }
 
 // ######## assembly ########
@@ -257,9 +257,10 @@ module front_plate(){
     }union(){
       // lens
       translate([0,-1,30])rotate([-90,0,0])cylinder(d=30,h=6);
-      translate([0,-1,30])rotate([-90,0,0])cylinder(d=34,h=2.5);
+      //translate([0,-1,30])rotate([-90,0,0])cylinder(d=34,h=2.5);
       // text
-      translate([-29,2.2,36])rotate([90,0,180])linear_extrude(height=0.5)text("PICSY", font="Pixelary");
+      //translate([-29,2.2,36])rotate([90,0,180])linear_extrude(height=0.5)text("PICSY", font="Pixelary");
+      translate([-39,1/2+1.8,38])cube([25,1,18],center=true);
     }
   }
    if($preview){
