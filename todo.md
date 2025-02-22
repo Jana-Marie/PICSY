@@ -26,9 +26,10 @@
 
 - **STM32**
   - [x] ~~Add initial fw~~
-  - [x] ~~I2C~~
+  - [ ] I2C
     - [x] ~~Implement functionality~~
     - [x] ~~Define registermap~~
+    - [ ] Sticky interrupts for rotary switches
   - [x] ~~ADC~~
     - [x] ~~Add all ADC channels~~
     - [x] ~~Bin the rotary encoders~~
