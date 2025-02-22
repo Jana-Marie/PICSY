@@ -19,6 +19,7 @@ gerber/
 *.FCStd 
 
 # STM32
+*.jdebug.user
 *.jdebug
 *.ioc
 build/
