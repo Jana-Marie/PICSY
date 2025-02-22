@@ -8,3 +8,9 @@ gerber/
 *.step
 *.stp
 *.stl
+*.off
+*.obj
+*.csg
+*.3mf
+*.FCBak
+*.FCStd 
