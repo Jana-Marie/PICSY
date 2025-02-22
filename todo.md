@@ -3,14 +3,14 @@
     - [ ] Fix buffer swap issue, check if it still persists
     - [ ] Increase processing speed
   - [ ] UI
-    - [ ] Trigger pin irq
+    - [x] Trigger pin irq
     - [ ] Add webserver to view and transmit images
     - [ ] Add palette display driver
     - [ ] Implement palette display UI
     - [ ] Add live-view display driver
     - [ ] Implement live view
   - [ ] Coprocessor
-    - [ ] Read trigger pin
+    - [x] Read trigger pin
     - [ ] Add co-processor communication (I2C)
     - [ ] Co-processor flashing via I2C
   - [ ] Settings
@@ -24,17 +24,17 @@
 
 
 - **STM32**
-  - [ ] Add initial fw
+  - [x] Add initial fw
   - [ ] I2C
     - [ ] Implement functionality
     - [ ] Define registermap
-  - [ ] ADC
-    - [ ] Add all ADC channels
+  - [x] ADC
+    - [x] Add all ADC channels
     - [ ] Bin the rotary encoders
     - [ ] Implement VBAT calculation
-  - [ ] Trigger pins
-    - [ ] Add l-r trigger pins
-    - [ ] have a direct trigger pin interrup pass-through
+  - [x] Trigger pins
+    - [x] Add l-r trigger pins
+    - [x] have a direct trigger pin interrup pass-through
   - [ ] Displays
     - [ ] Add CS pins, inactive high
     - [ ] Add RST pin
