@@ -60,5 +60,11 @@
   - [ ] Clean up schematic
   - [ ] DFM
 
+- **Web**
+  - [ ] Build an image upscaler
+    - [x] Build a web-app
+    - [ ] Embed it onto the ESP32
+    - [ ] Add boot screens for web-app solution
+
 - **Documentation**
   - [ ] Add documentation as we go along
