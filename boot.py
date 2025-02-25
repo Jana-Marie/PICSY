@@ -54,6 +54,8 @@ class Cam:
       pass
 
   def takePhotoToSD(self):
+    print("Flushing framebuffer")
+    _ = camera.capture()
     print("Taking photo")
     buf = camera.capture()
     print("Processing photo...")
@@ -118,7 +120,6 @@ if __name__ == '__main__':
   
   cam = Cam("PICSY-", 33)
   time.sleep_ms(100)
-  cam.defineShutterButtonIrq()
-
+  
   while True:
     time.sleep_ms(10)
