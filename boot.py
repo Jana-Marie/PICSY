@@ -119,7 +119,12 @@ class Cam:
 if __name__ == '__main__':
   
   cam = Cam("PICSY-", 33)
+
   time.sleep_ms(100)
-  
+
+  cam.defineShutterButtonIrq()
+  cam.setCameraImageContrast(-1)
+  cam.setCameraImageQuality(63)
+
   while True:
     time.sleep_ms(10)
