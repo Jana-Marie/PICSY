@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512mm"
+   height="512mm"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="3.175"
+   inkscape:export-ydpi="3.175"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.2973261"
+     inkscape:cx="65.584555"
+     inkscape:cy="583.53438"
+     inkscape:window-width="3774"
+     inkscape:window-height="2073"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="247.61354"
+       y="489.28154"
+       width="1573.1737"
+       height="1191.9526"
+       id="rect236" />
+    <rect
+       x="247.61354"
+       y="489.28156"
+       width="1573.1737"
+       height="1191.9526"
+       id="rect236-6" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#e8cbd0;fill-opacity:1;stroke:#3b3682;stroke-width:9.80843;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect1795"
+       width="502.19156"
+       height="502.19156"
+       x="4.9042144"
+       y="4.9042144"
+       ry="87.016907" />
+    <text
+       xml:space="preserve"
+       transform="matrix(5.4501198,0,0,5.4501198,-1322.4272,-2599.5788)"
+       id="text234"
+       style="font-size:53.3333px;font-family:madspixel2;-inkscape-font-specification:madspixel2;white-space:pre;shape-inside:url(#rect236);display:inline;fill:#467ac4;fill-opacity:1;stroke:#000000;stroke-width:0.0377953;stroke-linecap:square;paint-order:stroke fill markers"><tspan
+         x="247.61328"
+         y="542.61455"
+         id="tspan873"><tspan
+           style="font-family:Pixelary;-inkscape-font-specification:Pixelary"
+           id="tspan871">PICSY</tspan></tspan></text>
+  </g>
+</svg>

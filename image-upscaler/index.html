@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PICSY Image Upscaler</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PICSY Camera image upscaler using nearest neighbor scaling.">
+    <style>
+      html {
+        font-family: sans-serif;
+        font-size: 15px;
+      }
+
+      body {
+        padding: 0 1rem;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+
+      form {
+        border: 1px solid #cccccc;
+        padding: 1rem;
+      }
+
+      img {
+        margin: 1rem 0;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PICSY Image Upscaler</h1>
+    
+    <p>
+      Nearest neighbor upscale to keep pixelation.
+    </p>
+    
+    <form id="up-form" action="" method="post"r>
+      <input type="file" name="photo" accept="image/png" required /><br>
+      Ratio: 
+      <input type="radio" id="html" name="scale_ratio" value="2">
+      <label for="2x">2x</label>
+      <input type="radio" id="css" name="scale_ratio" value="4">
+      <label for="4x">4x</label>
+      <input type="radio" id="javascript" name="scale_ratio" value="6">
+      <label for="6x">6x</label>
+      <input type="radio" id="javascript" name="scale_ratio" value="8" checked="checked">
+      <label for="8x">8x</label>
+      <input type="radio" id="javascript" name="scale_ratio" value="10">
+      <label for="8x">10x</label><br>
+      <button type="submit">Resize Image</button>
+    </form>
+    
+    <br>
+    <a id="img-download"></a>
+    <img id="up-preview">
+    
+    <script type="text/javascript">
+      const form = document.querySelector('#up-form');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(e.currentTarget);
+        const photoField = formData.get('photo');
+        const scaleRatio = formData.get('scale_ratio');
+        const dataUri = await dataUriFromFormField(photoField);
+        
+        const imgElement = document.createElement('img');
+        imgElement.addEventListener('load', () => {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 400 * scaleRatio;
+          canvas.height = 296 * scaleRatio;
+          ctx.imageSmoothingEnabled = false;
+          ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
+          document.querySelector('#up-preview').src = canvas.toDataURL();
+
+          document.querySelector('#img-download').download = formData.get('photo').name.slice(0, 5) + '-R' + scaleRatio + 'x' + formData.get('photo').name.slice(5);
+          document.querySelector('#img-download').href =  canvas.toDataURL();
+          document.querySelector('#img-download').innerHTML = '<button type="button">Download PNG</button>';
+        });
+        imgElement.src = dataUri;
+      });
+
+      function dataUriFromFormField (field) {
+        return new Promise((resolve) => {
+          const reader = new FileReader();
+          
+          reader.addEventListener('load', () => {
+            resolve(reader.result);
+          });
+          
+          reader.readAsDataURL(field);
+        });
+      }
+    </script>
+  </body>
+</html>

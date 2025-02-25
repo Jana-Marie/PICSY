@@ -1,9 +1,11 @@
 - **ESP32**
   - [ ] Image processing
-    - [ ] Fix buffer swap issue, check if it still persists
+    - [x] ~~Fix buffer swap issue, check if it still persists~~
     - [ ] Increase processing speed
   - [ ] UI
     - [x] ~~Trigger pin irq~~
+    - [ ] Somehow upscale images by 4x
+      - Added an external upscaler via js/html for now!
     - [ ] Add webserver to view and transmit images
     - [ ] Add palette display driver
     - [ ] Implement palette display UI
