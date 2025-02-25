@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24mm"
+   height="40mm"
+   viewBox="0 0 24 40"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="label-bottom.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.5144352"
+     inkscape:cx="25.697794"
+     inkscape:cy="106.41725"
+     inkscape:window-width="2160"
+     inkscape:window-height="3803"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="57.636105"
+       y="75.638359"
+       width="1701.3195"
+       height="969.5498"
+       id="rect236" />
+    <rect
+       x="57.636105"
+       y="75.638359"
+       width="1701.3195"
+       height="969.5498"
+       id="rect236-3" />
+    <rect
+       x="57.636105"
+       y="75.638359"
+       width="1701.3195"
+       height="969.5498"
+       id="rect236-3-7" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.06907902,-0.06907902,0,9.3725232,-0.2150487)"
+       id="text234-6-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:madspixel2;-inkscape-font-specification:madspixel2;white-space:pre;shape-inside:url(#rect236-3-7);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0983178;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><tspan
+         x="57.636719"
+         y="122.30531"
+         id="tspan418">Battery 800mAh 3.8V</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.09506031,-0.09506031,0,15.666777,-1.7976407)"
+       id="text234-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:madspixel2;-inkscape-font-specification:madspixel2;white-space:pre;shape-inside:url(#rect236-3);display:inline;fill:#000000;stroke:#000000;stroke-width:0.0714462;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><tspan
+         x="57.636719"
+         y="122.30531"
+         id="tspan420">rev1.0 SN00002</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0,0.17398373,-0.17398373,0,31.139445,-7.5654279)"
+       id="text234"
+       style="font-size:53.3333px;font-family:Pixelary;-inkscape-font-specification:Pixelary;white-space:pre;shape-inside:url(#rect236);fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.523237;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><tspan
+         x="57.636719"
+         y="128.97197"
+         id="tspan422">PICSY Camera</tspan></text>
+  </g>
+</svg>
