@@ -1,6 +1,6 @@
 # PICSY
 
-**UNDER DEVELOPMENT :3**
+**UNDER DEVELOPMENT...**
 
 An ESP32 based Pixel-Art-Camera, shooting color-indexed pixel art alike PNGs directly onto an SD card.
 
