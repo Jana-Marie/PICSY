@@ -26,7 +26,15 @@ An ESP32 based Pixel-Art-Camera, shooting color-indexed pixel art alike PNGs dir
     </tr>
     <tr>
       <td colspan="2">
-        <img src="/img/out-scaled-rotated.png" title=""/>
+        <img src="/img/IMG_7610.jpeg" title=""/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="/img/IMG_7605.jpeg" title=""/>
+      </td>
+      <td>
+        <img src="/img/IMG_7612.jpeg" title=""/>
       </td>
     </tr>
   </tbody>
